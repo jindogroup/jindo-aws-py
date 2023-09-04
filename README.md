@@ -14,35 +14,35 @@ pip install -e ./
 
 SSH
 ```
-pip install git+ssh://git@github.com/jindogroup/jindo-client-py.git
+pip install git+ssh://git@github.com/jindogroup/jindo-aws-py-py.git
 
 ```
 
 HTTPS
 ```
-pip install git+https://${GITHUB_TOKEN}@github.com/jindogroup/jindo-client-py.git
+pip install git+https://github.com/jindogroup/jindo-aws-py-py.git
 
 ```
 
 ### Through setup.py/requirements.txt
 ```
-jindo-client @ git+ssh://git@github.com/jindogroup/jindo-client-py.git
+jindo-aws-py @ git+ssh://git@github.com/jindogroup/jindo-aws-py-py.git
 ```
 
-or through HTTP and GITHUB_TOKEN (required during CICID)
+or through HTTP
 ```
-jindo-client @ git+https://${GITHUB_TOKEN}@github.com/jindogroup/jindo-client-py.git
+jindo-aws-py @ git+https://github.com/jindogroup/jindo-aws-py-py.git
 ```
 
 ## Update library
 ```
-pip install --upgrade --force-reinstall git+ssh://git@github.com/jindogroup/jindo-client-py.git
+pip install --upgrade --force-reinstall git+ssh://git@github.com/jindogroup/jindo-aws-py-py.git
 ```
 
 
 ### Specify a particular version (commit)
 
 ```
-jindo-client @ git+ssh://git@github.com/jindogroup/jindo-client-py.git@<commit_hash>
+jindo-aws-py @ git+ssh://git@github.com/jindogroup/jindo-aws-py-py.git@<commit_hash>
 ```
-ex: `jindo-client @ git+ssh://git@github.com/jindogroup/jindo-client-py.git@fcc447827a23e0021ea50096c5cf97f78ec96735`
+ex: `jindo-aws-py @ git+ssh://git@github.com/jindogroup/jindo-aws-py-py.git@fcc447827a23e0021ea50096c5cf97f78ec96735`
