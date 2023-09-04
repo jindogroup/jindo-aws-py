@@ -34,21 +34,15 @@ class AWSCognitoTokenizer():
         self.ttl = ttl
         self.token_expiration = None
 
+        self._refresh_token()
+
+    def _refresh_token(self):
         success, token, expiration = generate_aws_cognito_token(self.region, self.client_app_id, self.username, self.password, self.ttl)
         if success:
             self.cognito_access_token = token
             self.token_expiration = expiration
 
-    def _refresh_token(self):
-        success, token, expiration = self._generate_token(self.region, self.client_app_id, self.username, self.password, self.ttl)
-        if success:
-            self.cognito_access_token = token
-            self.token_expiration = expiration
-
-    def _get_access_token(self, request_form):
-        token = request_form.api_token
-        if token:
-            return token
+    def get_cognito_access_token(self):
 
         # Check if token has expired, and refresh if needed
         if self.token_expiration and time.time() > self.token_expiration:
